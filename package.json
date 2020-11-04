@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ddacagent1:847cb50572aee59bebb6542064e0afe4c4ac674b@github.com/chew-org/nodejs-app-03.git"
+    "url": "ssh://git@github.com:chew-org/nodejs-app-03.git"
   },
   "author": "",
   "license": "ISC",
