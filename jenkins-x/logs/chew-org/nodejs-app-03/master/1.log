@@ -1,0 +1,51 @@
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1604477066.898606,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-chew-org-nodejs-app-03-master-cdlwn-v2bqm[0m
+{"level":"info","ts":1604477104.8030999,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/chew-org/nodejs-app-03.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1604477104.8034546,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1604477104.8506336,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN saveError ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm WARN source No description
+npm WARN source No repository field.
+npm WARN source No README data
+npm WARN source No license field.
+
+up to date in 0.61s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-cdlwn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+npm ERR! path /workspace/source/package.json
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall open
+npm ERR! enoent ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /tekton/home/.npm/_logs/2020-11-04T08_05_10_533Z-debug.log
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-npm-test'. The execution of the pipeline has stopped.[0m
