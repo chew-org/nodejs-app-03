@@ -1,0 +1,112 @@
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1604544831.5772622,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-chew-org-nodejs-app-03-master-r-kkgvg-jt5nh[0m
+{"level":"info","ts":1604544842.436359,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/chew-org/nodejs-app-03.git @ v0.0.5 in path /workspace/source"}
+{"level":"warn","ts":1604544842.436497,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1604544842.47573,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ae64beda374ea95714fe7b5d5331c8573a6e5ad9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+up to date in 1.09s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> nodejs-app-03@1.0.0 test /workspace/source
+> echo "Error: no test specified" && exit 0
+
+Error: no test specified
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1105 02:54:08.712126      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E1105 02:54:09.289309      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E1105 02:54:09.294023      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Built cross stage deps: map[]                
+[36mINFO[0m[0006] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0007] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0009] Executing 0 build triggers                   
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Checking for cached layer gcr.io/concise-perigee-292609/cache:ba8439d90077d8db01f1b84c5255130919cfe5935bb46f6a61d7c20dd3c6ca82... 
+[36mINFO[0m[0010] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0010] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0018] ENV PORT 8080                                
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] EXPOSE 8080                                  
+[36mINFO[0m[0018] cmd: EXPOSE                                  
+[36mINFO[0m[0018] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] WORKDIR /usr/src/app                         
+[36mINFO[0m[0018] cmd: workdir                                 
+[36mINFO[0m[0018] Changed working directory to /usr/src/app    
+[36mINFO[0m[0018] Creating directory /usr/src/app              
+[36mINFO[0m[0018] Resolving 1 paths                            
+[36mINFO[0m[0018] Taking snapshot of files...                  
+[36mINFO[0m[0018] COPY . .                                     
+[36mINFO[0m[0018] Resolving 112 paths                          
+[36mINFO[0m[0018] Taking snapshot of files...                  
+[36mINFO[0m[0018] CMD ["npm", "start"]                         
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] Pushing layer gcr.io/concise-perigee-292609/cache:ba8439d90077d8db01f1b84c5255130919cfe5935bb46f6a61d7c20dd3c6ca82 to cache now 
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/nodejs-app-03 to an unshallow repository
+Generating change log from git ref d3ced81ed75b6c91a3875a1fae1731c897211f9c => 36cbbbc6067004a437114c01f76627a3ba8aac28
+Associating user ********** in users.jenkins.io with email **********@gmail.com to git GitProvider user with login **********-0 as emails match
+Adding label jenkins.io/git-github-userid=**********-0 to user ********** in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for chew-org/nodejs-app-03 and tag v0.0.5 so creating a new release
+Updated the release information at https://github.com/chew-org/nodejs-app-03/releases/tag/v0.0.5
+generated: /workspace/source/charts/nodejs-app-03/templates/release.yaml
+Created Release nodejs-app-03-0-0-5 resource in namespace **
+Updating PipelineActivity chew-org-nodejs-app-03-master-3 with version 0.0.5
+Updated PipelineActivities chew-org-nodejs-app-03-master-3 with release notes URL: https://github.com/chew-org/nodejs-app-03/releases/tag/v0.0.5
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file nodejs-app-03-0.0.5.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mchew-org-nodejs-app-03-master-r-kkgvg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app nodejs-app-03 version 0.0.5 to namespace **-staging
+WARNING: Waiting for the fork of **********/environment-jenkinsx-staging to appear...
+Forked Git repository to https://github.com/**********/environment-jenkinsx-staging
+Created Pull Request: https://github.com/chew-org/environment-jenkinsx-staging/pull/1
+Added label updatebot to Pull Request https://github.com/chew-org/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/chew-org/environment-jenkinsx-staging/pull/1
+Pull Request https://github.com/chew-org/environment-jenkinsx-staging/pull/1 is merged at sha 0d0e0e02f1ab0f660479ed44ca2e23d1f5df8926
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names nodejs-app-03, **-nodejs-app-03, **-staging-nodejs-app-03
