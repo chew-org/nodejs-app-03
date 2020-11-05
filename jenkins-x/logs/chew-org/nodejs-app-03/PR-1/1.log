@@ -1,0 +1,123 @@
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1604562367.815681,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-chew-org-nodejs-app-03-pr-1-pr-4bxq4-b98dc[0m
+{"level":"info","ts":1604562377.7974381,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/chew-org/nodejs-app-03.git @ master in path /workspace/source"}
+{"level":"warn","ts":1604562377.79754,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1604562377.8346975,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:7847b10cdd5bde1fef812ba4e76e9f47f7b133e2,1:c65c4146eab3776bc460209bd9c0408a5d98ffb8
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow c65c4146eab3776bc460209bd9c0408a5d98ffb8: 7847b10cdd5bde1fef812ba4e76e9f47f7b133e2:
+DEBUG: ran git fetch --unshallow origin c65c4146eab3776bc460209bd9c0408a5d98ffb8: 7847b10cdd5bde1fef812ba4e76e9f47f7b133e2: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 7847b10cdd5bde1fef812ba4e76e9f47f7b133e2
+DEBUG: ran git reset --hard 7847b10cdd5bde1fef812ba4e76e9f47f7b133e2 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge c65c4146eab3776bc460209bd9c0408a5d98ffb8
+DEBUG: ran git merge c65c4146eab3776bc460209bd9c0408a5d98ffb8 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 7847b10cdd5bde1fef812ba4e76e9f47f7b133e2..HEAD
+Merged SHA c65c4146eab3776bc460209bd9c0408a5d98ffb8 with commit message 'v3 testing on preview build' into base branch master
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+up to date in 1.124s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> nodejs-app-03@1.0.0 test /workspace/source
+> echo "Error: no test specified" && exit 0
+
+Error: no test specified
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1105 07:46:26.730128      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E1105 07:46:27.229891      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E1105 07:46:27.233333      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0008] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0010] Executing 0 build triggers                   
+[36mINFO[0m[0010] cmd: EXPOSE                                  
+[36mINFO[0m[0010] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0010] Checking for cached layer gcr.io/concise-perigee-292609/cache:bafae9219ccc83b1e59329f9613f9c1ce8ead8937736156bfc887599bdf97e63... 
+[36mINFO[0m[0011] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0011] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0017] ENV PORT 8080                                
+[36mINFO[0m[0017] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0017] EXPOSE 8080                                  
+[36mINFO[0m[0017] cmd: EXPOSE                                  
+[36mINFO[0m[0017] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0017] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0017] WORKDIR /usr/src/app                         
+[36mINFO[0m[0017] cmd: workdir                                 
+[36mINFO[0m[0017] Changed working directory to /usr/src/app    
+[36mINFO[0m[0017] Creating directory /usr/src/app              
+[36mINFO[0m[0017] Resolving 1 paths                            
+[36mINFO[0m[0017] Taking snapshot of files...                  
+[36mINFO[0m[0017] COPY . .                                     
+[36mINFO[0m[0017] Resolving 202 paths                          
+[36mINFO[0m[0017] Taking snapshot of files...                  
+[36mINFO[0m[0017] CMD ["npm", "start"]                         
+[36mINFO[0m[0017] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0017] Pushing layer gcr.io/concise-perigee-292609/cache:bafae9219ccc83b1e59329f9613f9c1ce8ead8937736156bfc887599bdf97e63 to cache now 
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/concise-perigee-292609\/nodejs-app-03|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mchew-org-nodejs-app-03-pr-1-pr-4bxq4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment chew-org-nodejs-app-03-pr-1
+Namespace **-chew-org-nodejs-app-03-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.241.88.207.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/concise-perigee-292609/nodejs-app-03
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+
+Updating PipelineActivities chew-org-nodejs-app-03-pr-1-1 which has status Running
+WARNING: preview application http://nodejs-app-03.**-chew-org-nodejs-app-03-pr-1.35.241.88.207.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 783.034151ms
+WARNING: preview application http://nodejs-app-03.**-chew-org-nodejs-app-03-pr-1.35.241.88.207.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.077829579s
+Preview application is now available at: http://nodejs-app-03.**-chew-org-nodejs-app-03-pr-1.35.241.88.207.nip.io
