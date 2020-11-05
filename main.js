@@ -6,7 +6,7 @@ var server = http.createServer(function(req, res) {
  res.writeHead(200, {"Content-Type": "text/plain"});
  
  if (page == '/') {
-   res.write('V2. This is a testing on deploying nodejs application using JenkinsX');
+   res.write('V3. This is a testing on build preview using JenkinsX');
  }
  else if (page == '/dir1') {
   res.write('Welcome to dir1, how can I help you ?');
